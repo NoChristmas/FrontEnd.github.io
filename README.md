@@ -1,4 +1,4 @@
-# [Personal1 Project for Playing]
+# [Front End Training]
 
 주말이나 심심할 때 해보는 웹페이지 만들기 입니다.
 
