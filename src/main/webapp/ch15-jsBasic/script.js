@@ -1,0 +1,1 @@
+document.write('javascript에서 호춣')

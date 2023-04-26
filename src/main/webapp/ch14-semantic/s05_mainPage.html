@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Page Training</title>
+    <style text="text/css">
+        @font-face {
+            font-family: 'NanumMyeongjo-Bold';
+            src: url('../files/NanumMyeongjo-Bold.ttf') format('truetype');
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: white;
+            font-family: 'NanumMyeongjo-Bold';
+
+        }
+
+        header {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        ul#main_nav {
+            list-style: none;
+            margin-top: 0;
+            width: 100%;
+            height: 65px;
+            background-color: black;
+            text-align: center;
+            position: fixed;
+            z-index: 1;
+            /*first-image div로 부터 absolute로 
+            가려지는 현상이 있어 강제로 끌고옴*/
+
+        }
+
+        ul#main_nav li {
+            margin-top: 0;
+            height: 65px;
+            width: 14em;
+            text-decoration: none;
+            display: inline-block;
+            line-height: 65px;
+            /*이걸 처리 해 줘야 가운데로 내용들이 들어감*/
+
+        }
+
+        /*메뉴 설정 자잘자잘한 크기들*/
+        ul#main_nav li a {
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+
+        }
+
+        ul#main_nav li a:hover {
+            color: gray;
+        }
+
+        ul#main_nav li a:active {
+            color: gray;
+        }
+
+
+        div.first-image {
+            /*첫번 째 이미지를 감싸는 div*/
+            position: relative;
+            /*부모로 relative로 감싸면*/
+
+        }
+
+        div.first-image img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .first-image p {
+            position: absolute;
+            /*absolute로 텍스트를 위에 넣을 수 있음*/
+            margin-top: 10em;
+            font-size: 5em;
+            margin-left: 2em;
+
+
+        }
+
+
+        section#book {
+            /*주요 항공편 블럭*/
+            margin-top: 0em;
+            height: 100vh;
+
+        }
+
+        div.book-title-text {
+            font-size: 3em;
+            text-align: center;
+
+        }
+
+        div.contents {
+            width: 100%;
+
+            height: 100vh;
+        }
+
+        div.photo-paris {
+            float: left;
+            margin-left: 5%;
+            width: 40%;
+            height: 40%;
+            overflow: hidden;
+
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        div.photo-paris img {
+            width: 100%;
+            height: 100%;
+        }
+
+        div.photo-london {
+            float: right;
+            margin-right: 5%;
+            width: 40%;
+            height: 40%;
+            object-fit: cover;
+            overflow: hidden;
+
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        div.photo-london img {
+            width: 100%;
+            height: 100%
+        }
+
+        div.photo-osaka {
+            float: left;
+            margin-left: 5%;
+            width: 40%;
+            height: 40%;
+
+            overflow: hidden;
+
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        div.photo-osaka img {
+            width: 100%;
+            height: 100%
+        }
+
+        div.photo-thailand {
+            float: right;
+            margin-right: 5%;
+            width: 40%;
+            height: 40%;
+            object-fit: cover;
+            overflow: hidden;
+
+            text-align: center;
+            font-size: 1.5em;
+
+        }
+
+        div.photo-thailand img {
+            width: 100%;
+            height: 100%
+        }
+
+        section#recommend {
+            width: 100%;
+            height: 100vh;
+            margin-top: 2em;
+
+
+        }
+
+        div.recommend-title {
+            font-size: 4em;
+            margin-left: 2em;
+        }
+
+        div#Under-Line {
+            width: 100%;
+            height: 3px;
+            color: gray;
+            text-align: center;
+            background-color: gray;
+        }
+
+        div.vietnam{
+            height:100vh;
+            
+        }
+
+        div.photo-look{
+            width:100%;
+            height:20vh;
+            
+            overflow:hidden;
+            block-size:auto;
+        }
+        div.photo-food{
+            width:100%;
+            height:40vh;
+            
+            
+            overflow:hidden;
+        }
+
+        div.photo-city{
+            
+            width:100%;
+            height:100vh;
+            overflow:hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <!-- 맨 위 내용 -->
+        <header>
+            <nav>
+                <ul id="main_nav">
+                    <li><a href="#title-image">Home</a></li>
+                    <li><a href="#book">항공편 예약</a></li>
+                    <li><a href="#travel">추천 여행지</a></li>
+                    <li><a href="#warning">수하물 안내</a></li>
+                </ul>
+            </nav>
+            <div class="first-image">
+                <p>"Travel to The World"</p>
+                <img src="../files/airplane.jpg">
+
+            </div>
+        </header>
+        <!-- 내용1 -->
+        <section id="book">
+            <div class="book-title-text">
+                <p>주요 항공편</p>
+                <div id="Under-Line"></div>
+            </div>
+            <div class="contents">
+
+                <div class="photo-paris">
+                    <p>프랑스 - 파리</p>
+                    <img src="../files/paris.jpg">
+                </div>
+
+                <div class="photo-london">
+                    <p>영국 - 런던</p>
+                    <img src="../files/london.jpg">
+                </div>
+
+                <div class="photo-osaka">
+                    <p>일본 - 오사카</p>
+                    <img src="../files/osaka.jpg">
+                </div>
+
+                <div class="photo-thailand">
+                    <p>태국 - 방콕</p>
+                    <img src="../files/thailand.jpg">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 내용2 -->
+        <section id="recommend">
+            <div id="Under-Line"></div>
+            <div class="recommend-title">
+
+                <p>오늘의 추천 여행지 <small>- Vietnam</small></p>
+
+            </div>
+            <div id="Under-Line"></div>
+            <div class="vietnam">
+                <div class="photo-look">
+                    <img src="../files/vietnamlook.jpg">
+                </div>
+
+                <div class="photo-food">
+                    <img src="../files/vietnamfood.jpg">
+                </div>
+
+                <div class="photo-city">
+                    <img src="../files/vietnamcity.jpg">
+                </div>
+
+                <div class="text">
+                    <p>전경</p>
+                    <p>음식</p>
+                    <p>도시</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="imform">
+            <div class="page-inform">
+                <h1>수하물 안내</h1>
+            </div>
+            <div class="content">
+                <div class="photo">
+                    <img src="../files/ice.jpg">
+                </div>
+                <div class="text">
+
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>My times with Coffee</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

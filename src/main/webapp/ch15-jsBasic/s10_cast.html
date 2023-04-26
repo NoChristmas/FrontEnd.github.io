@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형변환</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var input= prompt('숫자를 입력하세요','숫자');
+        document.write(input); //문자로 무조건 반환함....
+
+        document.write(typeof(input) + ":" + input);
+        document.write('<br>');
+        document.write(input*10+'<br>');
+        document.write(input+10);
+        document.write('<br><br>');
+
+        //형 변환
+        //문자*문자열)을 숫자로 변환
+        var numberInput = Number(input);
+        document.write('<br>형 변환 이후<br>');
+        document.write(typeof(numberInput)+":"+numberInput);
+        document.write('<br>');
+        document.write(numberInput+10);
+        document.write('<br>');
+    </script>
+    
+</body>
+</html>
