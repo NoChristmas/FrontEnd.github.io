@@ -178,10 +178,12 @@
             height: 100%
         }
 
-        section#recommend {
+        section#recommend { /*추천 여행지 블럭*/
+
+            
             width: 100%;
             height: 100vh;
-            margin-top: 2em;
+            
 
 
         }
@@ -199,21 +201,24 @@
             background-color: gray;
         }
 
-        div.vietnam{
+        div.vietnam{ /*추천여행지 블럭*/
+            margin-top:5vh;
             height:100vh;
             
         }
 
         div.photo-look{
-            width:100%;
-            height:20vh;
+            float:left;
+            width:65%;
+            height:50vh;
             
             overflow:hidden;
-            block-size:auto;
+            
         }
         div.photo-food{
-            width:100%;
-            height:40vh;
+            float:right;
+            width:30%;
+            height:50vh;
             
             
             overflow:hidden;
@@ -221,9 +226,18 @@
 
         div.photo-city{
             
+            
+            width:100%;
+            height:50vh;
+            overflow:hidden;
+            
+        }
+
+
+        section.inform{
             width:100%;
             height:100vh;
-            overflow:hidden;
+            border-color : green;
         }
     </style>
 </head>
@@ -300,19 +314,19 @@
                     <img src="../files/vietnamcity.jpg">
                 </div>
 
-                <div class="text">
-                    <p>전경</p>
-                    <p>음식</p>
-                    <p>도시</p>
-                </div>
+                
             </div>
         </section>
 
-        <section id="imform">
+        <!-- 추후에 다시 수정 필요
+        <section id="inform">
             <div class="page-inform">
-                <h1>수하물 안내</h1>
+                <p>수하물 안내</p>
             </div>
-            <div class="content">
+            <div id="Under-Line"></div>
+
+
+            <div class="inform-content">
                 <div class="photo">
                     <img src="../files/ice.jpg">
                 </div>
@@ -325,6 +339,7 @@
         <footer>
             <p>My times with Coffee</p>
         </footer>
+        -->
     </div>
 
 </body>
