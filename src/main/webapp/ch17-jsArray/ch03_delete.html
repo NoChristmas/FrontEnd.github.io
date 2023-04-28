@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 삭제</title>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        let array = ['one','two','three'];
+
+        array.length = 1;
+
+        document.write(array+'<br>');
+        document.write('--------------<br>');
+
+        let array2 = ['포도','사과','귤','망고'];
+
+        delete array2[1];
+        document.write(array2+'<br>');
+        document.write('--------------<br>');
+        let array3 = ['서울','부산','광주','인천'];
+
+        //index 2에 해당 (갯수) 요소를 삭제
+        array3.splice(2,1);
+        document.write(array3);
+        
+
+    </script>
+
+</body>
+
+</html>

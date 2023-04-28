@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert</title>
+    <script type="text/javascript">
+        /*
+            자바스크립트의 배열은 가변 길이이기 때문에 요소의 추가,삭제 가능
+        */
+        let array=['포도','사과','바나나','망고'];
+        
+        //배열 요소의 출력
+        for(let i=0; i<array.length;i++){
+            document.write(array[i]+'<br>');
+        }
+        document.write('------------------------<br>');
+
+        //for 반복문
+        for(let i in array){
+            document.write(array[i]+'<br>')
+        }
+
+        document.write('------------------------<br>');
+        array[10] = '사과';
+        
+        for(let i in array){
+            document.write(array[i]+'<br>')
+        }
+
+        //건너뛴 요소에 접근하면 undefined 값 반환
+        document.write(array[4]);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

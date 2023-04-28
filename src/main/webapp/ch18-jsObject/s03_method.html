@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        let person={
+            //속성 지정
+            name:'홍길동',
+            //메서드 지정
+            eat:function(food){
+                alert(person.name+'이 '+food+'을 먹습니다.');
+            }
+
+            //person에 this.name 해도 됨
+        };
+
+        //객체의 메서드 호출
+        person.eat('밥');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

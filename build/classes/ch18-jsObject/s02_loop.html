@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let product={
+            //속성(key(프로퍼티):value)
+            제품명:'소나타',
+            제품번호:'A1001',
+            기능:'고속주행',
+            원산지:'대한민국',
+            가격:1000,
+            업데이트지원:true
+        };
+
+        for(let key in product){
+            document.write(key+'<br>')
+            document.write(product[key]+'<br><br>');
+        }
+
+        var array = [2,1,6];
+        array.slice(0,1);
+    </script>
+</body>
+</html>

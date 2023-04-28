@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>푸쉬</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        push() : 배열 객체의 마지막에 새 데이터 삽입
+        pop() : 배열에 저장된 데이터 중 마지막 인덱스에 저장된 데이터를 삭제
+        shift() : 배열 객체에 저장된 데이터 중 첫번째 인덱스에 저장된 데이터를 삭제
+        unshift() : 배열 객체의 가장 앞의 인덱스에 새 데이터를 삽입
+        */
+
+        let array =[];
+        array.push(10,20,30);//삽입
+        document.write(array+'<br>');
+
+        array.push(40);
+        document.write(array+'<br>')
+        document.write(array.pop()+'<br>')
+
+        array.unshift('meolon');
+        document.write(array+'<br>')
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        let number1 = -10/0;
+        document.write('number1 = ' + number1 + '<br>');
+
+        if(isFinite(number1)){//양수,음수를 0으로 나눴는지 확인
+            //0이 아닌 경우
+            document.write('유한<br>');
+        } else {
+            document.write('무한<br>');
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
