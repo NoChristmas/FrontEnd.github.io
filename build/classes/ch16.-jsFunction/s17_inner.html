@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script type="text/javascript">
-        function outerFunction(name){
-            let output ='hello ' + name + ' !';
-            return function(){
-                alert(output);
-            };
-        }
-        
-    //    let result = outerFunction('홍길동');
-
-    //    result();
-
-        outerFunction('홍길동')();
-    </script>
+<meta charset="UTF-8">
+<title>지역변수의 유효범위 - 클로저</title>
 </head>
 <body>
-    
+<script type="text/javascript">
+/*
+지역변수는 함수 레벨 스코프일 경우 함수가 종료될 때 사라짐
+하지만, 클로저를 사용하면 이 규칙을 위반할 수 있음.
+클로저는 지역변수를 남겨두는 현상.
+ */
+	function outerFunction(name){
+		//지역변수
+		let output = 'Hello ' + name + '!';
+		//내부함수를 정의하고 내부함수를 반환
+		return function(){
+			alert(output);
+		};
+	}
+	//함수 호출
+	//let result = outerFunction('홍길동');
+	//result에 저장된 함수를 호출
+	//result();
+	
+	//outerFunction함수가 반환한 내부함수를 호출
+	outerFunction('홍길동')();
+	
+	
+</script>
 </body>
 </html>
+
+
+
+

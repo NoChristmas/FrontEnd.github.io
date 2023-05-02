@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>내부함수</title>
-    <script type="text/javascript">
-
-        function f(){
-            //내부함수
-            function g(){
-                document.write('g is called');
-            }
-            //g함수 호출
-            g();
-        }
-
-        f();
-    </script>
+<meta charset="UTF-8">
+<title>내부함수</title>
 </head>
 <body>
-    
+<script type="text/javascript">
+	function f(){
+		//내부함수
+		function g(){
+			document.write('g is called');
+		}
+		//g함수 호출
+		g();
+	}
+	//f함수 호출
+	f();
+</script>
 </body>
 </html>
+
+
+
+

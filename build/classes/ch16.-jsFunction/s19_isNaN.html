@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script type="text/javascript">
-        let number1 = 10 / 'A'; //NaN(Not a Number)출력
-        document.wrtie(
-            'number1 = ' + number1 + '<br>'
-        );
-        if(number1 == isNaN) { //항상 false로 반환함
-               document.write('숫자가 아님<br>');              //때문에 isNaN함수를 사용해야함
-        } else {
-            document.write('숫자임');
-        }
-
-    </script>
+<meta charset="UTF-8">
+<title>isNaN함수</title>
 </head>
 <body>
-    
+<script type="text/javascript">
+	let number1 = 10 / 'A';//NaN(Not a Number) 출력
+	document.write(
+			'number1 = ' + number1 + '<br>');
+	
+	if(number1 == NaN){//항상 false로 반환하기 
+		               //때문에 isNaN함수를 사용해야
+		               //함
+		document.write('숫자가 아님<br>');
+	}else{
+		document.write('숫자임<br>');
+	}
+	
+	document.write('----------<br>');
+	
+	//전달된 인자의 값이 숫자인지 아닌지 판별
+	if(isNaN(number1)){
+		document.write('숫자가 아님<br>');
+	}else{
+		document.write('숫자임');
+	}
+	
+</script>
 </body>
 </html>
+
+
+
+
