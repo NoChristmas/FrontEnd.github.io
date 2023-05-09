@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            //파일을 선택할 때
+            document.getElementById('file').onchange = function () {
+                let file = this.files[0]; //기본적으로 배열로 만들긴 함 (복수로 만드는 경우도 있기 때문이다.)
+
+                //파일의 정보를 읽어와서 파일명을 출력
+                alert(file.name + '을 선택 했습니다.');
+            }
+
+            //읽기 버튼을 클릭할 때
+            document.getElementById('btnStart').onclick = function () {
+                readProcess();
+            }
+
+        }
+
+        function readProcess() { //if(file==undefined)
+            let file = document.getElementById('file').files[0];
+            if (!file) {
+                alert('파일을 읽어와라....');
+                return;
+            }
+
+            //innerHTML이랑 textContent랑 바꿔도됨
+            document.getElementById('filename').textContent = file.name;
+            document.getElementById('filesize').textContent = '(' + file.size + ' bytes)';
+            document.getElementById('filetype').textContent = file.type;
+            document.getElementById('filedate').textContent = file.lastModifiedDate.toLocaleString();
+
+            //파일의 내용 읽기
+
+            //인코딩 지정하기
+            let encodeList = document.getElementById('encoding'); //encoding을 포함한 태그를 가져와서 encodeList에 담음
+            let encoding = encodeList.value;    //그 태그의 value를 encoding에 담음
+            let reader = new FileReader(); //파일 읽기 기능 제공
+            
+            //선택한 파일을 읽어서 문자열로 저장
+            reader.readAsText(file, encoding);
+
+            //파일 전부를 읽게 되면 이벤트가 발생하고 이벤트 핸들러가 구동 됨
+            reader.onload = function () {
+                let contents = document.getElementById('contents');
+
+                //읽어들인 내용
+                contents.value = reader.result;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>현재 시스템의 파일 읽기</h2>
+    <input type="file" id="file" accept="text/*">
+    <!-- multiple은 복수 선택 쌉가능 -->
+    <select id="encoding">
+        <!-- option태그안의 값과 value 값이 일치하면 생략 쌉가능 -->
+        <option>EUC-KR</option>
+        <option>UTF-8</option>
+    </select>
+    <button id="btnStart">읽기</button>
+    <br>
+    <div>
+        <span id="filename">파일명</span>
+        <span id="filesize">파일크기</span>
+        <span id="filetype">파일타입</span>
+        <span id="filedate">파일의 마지막 갱신 일시</span>
+    </div>
+    <textarea rows="10" cols="50" id="contents" readonly="readonly"></textarea>
+</body>
+
+</html>

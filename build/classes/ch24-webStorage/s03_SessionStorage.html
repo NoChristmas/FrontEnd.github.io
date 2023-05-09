@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세션 스토리지</title>
+    <script type="text/javascript">
+        /*
+        세션스토리지는 브라우저가 열려있는 동안 모든 데이터를 기억하고 있다가 탭 또는 창을 닫으면 모두 지워지는 저장 공간
+        */
+        window.onload = function () {
+            load(); //데이타 읽기
+
+            let save = document.getElementById('save');
+
+            save.onclick = function(){ //save의 id를 가지고 있는 태그를 클릭 하면 함수가 돔
+                let first = document.getElementById('first'); //first의 id와 일치하는 태그의 값을 first에 저장
+                
+                //sessionStorage.setItem('name',first.value);
+                sessionStorage.name = first.value;
+                
+                load();
+            }
+        };
+
+        function load() {
+            let display = document.getElementById('display');
+            //세션 스토리지에 저장된 데이터 읽기
+            //let name = sessionStorage.getItem('name');
+            let name = sessionStorage.name;
+
+            //값이 있으면 true, 값이 없으면 undefined 반환, undefined는 false
+            if(name){
+                display.innerHTML = '저장된 값 : ' + name;
+            }
+            
+
+        };
+    </script>
+</head>
+
+<body>
+    <h2>세션스토리지</h2>
+    <input type="text" name="first" id="first">
+    <button id="save">저장</button>
+    <div id="display">비어있음</div>
+</body>
+
+</html>
