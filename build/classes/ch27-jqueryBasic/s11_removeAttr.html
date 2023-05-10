@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove</title>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //3초 후에 매개변수로 전달된 함수를실행
+            setTimeout(function(){
+                $('h1').removeAttr('align');
+            },3000)
+        })
+    </script>
+</head>
+<body>
+    <h1 align="center">Header - 0</h1>
+    <h1>Header - 1</h1>
+    <h1>Header - 2</h1>
+</body>
+</html>

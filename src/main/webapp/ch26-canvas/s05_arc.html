@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            let canvas =
+                document.getElementById('canvas');
+            if (canvas.getContext) {
+                let context = canvas.getContext('2d');
+                
+                /*
+                arc메서드에서의 각도는 도(degree)로 표시하지 않고 라디안 값으로 표기함
+                표시 1라디안은 180/Math.PI, 60도
+                */
+
+                context.arc(70,70,20,0,(Math.PI/180)*60,true);
+                context.stroke();
+                
+            } else {
+                alert('브라우저가 캔버스를 지원하지 않습니다.');
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <canvas id="canvas" width="700" height="500"></canvas>
+</body>
+
+</html>
