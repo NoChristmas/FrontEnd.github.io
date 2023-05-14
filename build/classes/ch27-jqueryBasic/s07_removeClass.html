@@ -1,36 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jQuery</title>
-    <style type="text/css">
-        .item{color:red}
-        .select{background:yellow};
-    </style>
-    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            //3초 후에 매개 변수로 전달된 함수를 실행
-            setTimeout(function(){
-                //문서 객체의 클래스 속성을 제거
-                $('h1').removeClass('select');
-            
-            },3000);
-        });
-        
-        
-
-    </script>
+<meta charset="UTF-8">
+<title>jQuery</title>
+<style type="text/css">
+	.item{color:red;}
+	.select{background:yellow;}
+</style>
+<script type="text/javascript" 
+    src="../js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//3초 후에 매개변수로 전달된 함수를 실행
+		setTimeout(function(){
+			//문서 객체의 클래스 속성을 제거
+			$('h1').removeClass('select');
+		},3000);	
+	});
+</script>    
 </head>
-
 <body>
-    <h1 class="item">Header - 0</h1>
-    <h1 class="item select">Header - 1</h1>
-    <h1 class="item">Header - 2</h1>
-    
+	<h1 class="item">Header - 0</h1>
+	<h1 class="item select">Header - 1</h1>
+	<h1 class="item">Header - 2</h1>
 </body>
-
 </html>
+
+
